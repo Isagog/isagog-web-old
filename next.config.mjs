@@ -1,7 +1,13 @@
 import createMDX from "@next/mdx";
+import { normaliseBasePath } from "./src/lib/normalise-base-path.mjs";
+
+const basePath = normaliseBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Empty when this was the isagog.com root site; "/isagog-old" now that
+  // it's archived at that subpath under the isagog-web rebuild.
+  basePath,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     // Static export has no image optimizer; emit plain <img> tags.

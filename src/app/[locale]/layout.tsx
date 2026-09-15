@@ -2,6 +2,7 @@ import { Footer, Header } from "@/app/_components/custom";
 import { BodyWrapper } from "@/app/_components/custom/body-wrapper";
 import { Providers } from "@/app/_components/providers";
 import { I18nProviderClient } from "@/packages/locales/client";
+import { asset, SITE_URL } from "@/lib/base-path";
 import { getStaticParams } from "@/packages/locales/server";
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
@@ -12,17 +13,18 @@ export const metadata: Metadata = {
   title: "ISAGOG - AI that makes sense",
   description:
     "ISAGOG is an AI Engineering company that helps businesses to build intelligent and trustworthy AI solutions.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
-  metadataBase: new URL("https://isagog.com"),
+  icons: [{ rel: "icon", url: asset("/favicon.ico") }],
+  metadataBase: new URL(SITE_URL),
+  robots: { index: false, follow: false },
   openGraph: {
     title: "ISAGOG - AI that makes sense",
     description:
       "ISAGOG is an AI Engineering company that helps businesses to build intelligent and trustworthy AI solutions.",
-    url: "https://isagog.com",
+    url: SITE_URL,
     siteName: "ISAGOG",
     images: [
       {
-        url: "https://isagog.com/images/tree.avif",
+        url: asset("/images/tree.avif"),
         width: 1200,
         height: 630,
         alt: "Illustration representing ISAGOG - AI Engineering Company",
@@ -35,13 +37,13 @@ export const metadata: Metadata = {
     title: "ISAGOG - AI that makes sense",
     description:
       "ISAGOG is an AI Engineering company that helps businesses to build intelligent and trustworthy AI solutions.",
-    images: ["https://isagog.com/images/tree.avif"],
+    images: [asset("/images/tree.avif")],
   },
   alternates: {
-    canonical: "https://isagog.com/",
+    canonical: `${SITE_URL}/`,
     languages: {
-      en: "/en",
-      it: "/it",
+      en: `${SITE_URL}/en`,
+      it: `${SITE_URL}/it`,
     },
   },
 };

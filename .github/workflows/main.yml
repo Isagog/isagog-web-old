@@ -41,6 +41,10 @@ jobs:
 
       - name: Build static export
         run: pnpm build
+        env:
+          # This repo was cut over from the isagog.com root to being an
+          # archived backup at https://isagog.com/isagog-old/.
+          NEXT_PUBLIC_BASE_PATH: /isagog-old
 
       - name: Generate timestamp
         id: ts

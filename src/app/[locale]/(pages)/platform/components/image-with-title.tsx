@@ -1,5 +1,6 @@
 "use client";
 
+import { asset } from "@/lib/base-path";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -22,7 +23,7 @@ export const ImageWithTitle = ({
         {title}
       </motion.h1>
       <div className="w-full bg-forest rounded-lg p-8 sm:p-12 flex items-center justify-center">
-        <Image src={imageUrl} alt={title} width={1000} height={1000} />
+        <Image src={asset(imageUrl)} alt={title} width={1000} height={1000} />
       </div>
     </div>
   );

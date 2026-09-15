@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/app/_components/ui/dropdown-menu";
+import { asset } from "@/lib/base-path";
 import { stripLocale } from "@/lib/locale-href";
 import { cn } from "@/lib/utils";
 import { useScopedI18n } from "@/packages/locales/client";
@@ -36,7 +37,7 @@ export const Header = () => {
       <div className="flex w-full items-center justify-between gap-2 px-3 sm:px-6 py-2">
         <Link href="/">
           <Image
-            src="/logo-new.png"
+            src={asset("/logo-new.png")}
             alt="logo isagog"
             width={200}
             height={200}

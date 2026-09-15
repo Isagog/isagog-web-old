@@ -1,6 +1,7 @@
 "use client";
 
 import { Skeleton } from "@/app/_components/ui/skeleton";
+import { asset } from "@/lib/base-path";
 import { fetchArticles } from "@/packages/action/articles/article.action";
 import { LocaleLink as Link } from "@/app/_components/custom/locale-link";
 import { useQuery } from "@tanstack/react-query";
@@ -22,7 +23,7 @@ export const BlogCard = () => {
         >
           <div className="flex-shrink-0">
             <Image
-              src={isLoading ? "/images/blog-placeholder.avif" : article.image}
+              src={asset(isLoading ? "/images/blog-placeholder.avif" : article.image)}
               alt={article.title}
               width={200}
               height={200}

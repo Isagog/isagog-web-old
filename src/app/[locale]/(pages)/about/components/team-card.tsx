@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionTitle } from "@/app/_components/custom/section-title";
+import { asset } from "@/lib/base-path";
 import { useScopedI18n } from "@/packages/locales/client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -55,7 +56,7 @@ export const TeamCard = () => {
           >
             <div className="relative h-64">
               <Image
-                src={member.avatar ?? "/placeholder.png"}
+                src={asset(member.avatar ?? "/placeholder.png")}
                 alt={member.name}
                 width={1000}
                 height={1000}

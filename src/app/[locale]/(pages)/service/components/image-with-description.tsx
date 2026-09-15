@@ -1,5 +1,6 @@
 import { ImagePlaceholder } from "@/app/_components/custom/image-placeholder";
 import { SectionTitle } from "@/app/_components/custom/section-title";
+import { asset } from "@/lib/base-path";
 import Image from "next/image";
 
 export const ImageWithDescription = ({
@@ -29,7 +30,7 @@ export const ImageWithDescription = ({
     >
       {imageUrl ? (
         <Image
-          src={imageUrl}
+          src={asset(imageUrl)}
           alt="placeholder"
           width={500}
           height={500}

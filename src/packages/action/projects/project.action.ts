@@ -1,10 +1,11 @@
+import { asset } from "@/lib/base-path";
 import type { ProjectType } from "./project.model";
 import { zProjectsSchema } from "./project.model";
 
 export const fetchProjects = async (
   locale: string
 ): Promise<ProjectType[]> => {
-  const res = await fetch(`/projects-data/list.${locale}.json`);
+  const res = await fetch(asset(`/projects-data/list.${locale}.json`));
 
   if (!res.ok) throw new Error("Failed to fetch projects");
 

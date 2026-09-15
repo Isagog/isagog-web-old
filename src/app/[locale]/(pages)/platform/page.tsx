@@ -1,5 +1,6 @@
 import { Monitor, Network } from "lucide-react";
 import { SectionTitle } from "@/app/_components/custom/section-title";
+import { asset } from "@/lib/base-path";
 import { getScopedI18n, setStaticParamsLocale } from "@/packages/locales/server";
 import { TextCarousel } from "./components/text-carousel";
 
@@ -25,7 +26,7 @@ const PlatformPage = async ({
         </p>
       </section>
       <iframe
-        src={`/platform-explorer/${locale === "it" ? "it" : "en"}.html`}
+        src={asset(`/platform-explorer/${locale === "it" ? "it" : "en"}.html`)}
         title={
           locale === "it"
             ? "Esplora la piattaforma Isagog"

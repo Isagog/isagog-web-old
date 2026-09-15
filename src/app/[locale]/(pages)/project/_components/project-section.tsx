@@ -5,6 +5,7 @@ import { LocaleLink as Link } from "@/app/_components/custom/locale-link";
 import { Button } from "@/app/_components/ui/button";
 import { Card } from "@/app/_components/ui/card";
 import { Skeleton } from "@/app/_components/ui/skeleton";
+import { asset } from "@/lib/base-path";
 import { fetchProjects } from "@/packages/action/projects/project.action";
 import { useCurrentLocale, useScopedI18n } from "@/packages/locales/client";
 import { useQuery } from "@tanstack/react-query";
@@ -51,7 +52,7 @@ export const ProjectSection = () => {
               className="flex-col md:flex-row items-center w-[80%] mx-auto justify-between gap-8 mb-16 p-6"
             >
               <Image
-                src={project.image}
+                src={asset(project.image)}
                 alt={project.title}
                 width={1000}
                 height={1000}

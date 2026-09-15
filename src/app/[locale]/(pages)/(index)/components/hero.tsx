@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/base-path";
 import { useScopedI18n } from "@/packages/locales/client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,7 +10,7 @@ export const Hero = () => {
   return (
     <div className="flex flex-col items-center gap-2 justify-center min-h-screen mx-2">
       <Image
-        src="/images/tree.avif"
+        src={asset("/images/tree.avif")}
         alt="Tree"
         width={4000}
         height={4000}

@@ -1,5 +1,6 @@
 "use client";
 
+import { asset } from "@/lib/base-path";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ export const AnimateImage = () => {
       className="h-[250px] flex justify-center items-center"
     >
       <Image
-        src="/images/tree.avif"
+        src={asset("/images/tree.avif")}
         alt="Your Image"
         className="w-48 h-48"
         width={1000}

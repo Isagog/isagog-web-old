@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base-path";
 import MarkdownToJSX from "markdown-to-jsx";
 import Image from "next/image";
 
@@ -35,9 +36,10 @@ export const MarkdownRenderer = ({
             },
           },
           img: {
-            component: ({ ...props }) => (
+            component: ({ src, ...props }) => (
               <Image
                 {...props}
+                src={asset(src ?? "")}
                 className={`${imageClassName} block mx-auto my-6 w-auto h-auto`}
                 alt="article-image"
                 width={500}

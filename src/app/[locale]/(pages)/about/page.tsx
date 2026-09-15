@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base-path";
 import { getScopedI18n, setStaticParamsLocale } from "@/packages/locales/server";
 import Image from "next/image";
 import {
@@ -19,7 +20,7 @@ const AboutPage = async ({
   return (
     <div className="mx-5 sm:mx-auto sm:max-w-3/4 max-w-full flex flex-col sm:gap-16 gap-8 justify-center items-center ">
       <div className="justify-center items-center hidden sm:flex">
-        <Image src="/images/trees.avif" alt="Tree" width={1000} height={1000} />
+        <Image src={asset("/images/trees.avif")} alt="Tree" width={1000} height={1000} />
       </div>
       <Highlight />
       <div className="flex flex-col items-center justify-center gap-16">
@@ -38,7 +39,7 @@ const AboutPage = async ({
         />
       </div>
       <div className="block sm:hidden justify-center items-center">
-        <Image src="/images/trees.avif" alt="Tree" width={1000} height={1000} />
+        <Image src={asset("/images/trees.avif")} alt="Tree" width={1000} height={1000} />
       </div>
     </div>
   );

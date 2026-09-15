@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { LocaleLink as Link } from "@/app/_components/custom/locale-link";
+import { asset } from "@/lib/base-path";
 import { getScopedI18n, setStaticParamsLocale } from "@/packages/locales/server";
 import {
   AnimateImage,
@@ -59,52 +60,52 @@ const HomePage = async ({
           title={tNav("about.title")}
           description={tNav("about.description")}
           href="/about"
-          imageUrl="/images/about-images/tree-bonsai.png"
+          imageUrl={asset("/images/about-images/tree-bonsai.png")}
         />
         <NavWithDescriptionSection
           title={tNav("solution.title")}
           description={tNav("solution.description")}
           href="/service"
-          imageUrl="/images/about-images/tree-canopy.png"
+          imageUrl={asset("/images/about-images/tree-canopy.png")}
         />
         <NavWithDescriptionSection
           title={tNav("project.title")}
           description={tNav("project.description")}
           href="/project"
-          imageUrl="/images/about-images/tree-cypress.png"
+          imageUrl={asset("/images/about-images/tree-cypress.png")}
         />
         <NavWithDescriptionSection
           title={tNav("blog.title")}
           description={tNav("blog.description")}
           href="/blog"
-          imageUrl="/images/about-images/tree-palm.png"
+          imageUrl={asset("/images/about-images/tree-palm.png")}
         />
       </div>
       <div className="relative w-full bg-mist overflow-hidden flex flex-col justify-center items-center text-center text-terracotta h-[498px] mt-12">
         <div aria-hidden="true" className="absolute inset-0">
           <Image
-            src="/images/about-images/tree-pine.png"
+            src={asset("/images/about-images/tree-pine.png")}
             alt=""
             width={400}
             height={500}
             className="absolute -left-10 bottom-0 h-[400px] w-auto object-contain"
           />
           <Image
-            src="/images/about-images/tree-cypress.png"
+            src={asset("/images/about-images/tree-cypress.png")}
             alt=""
             width={400}
             height={500}
             className="hidden sm:block absolute left-[16%] bottom-0 h-[280px] w-auto object-contain opacity-80"
           />
           <Image
-            src="/images/about-images/tree-bushy.png"
+            src={asset("/images/about-images/tree-bushy.png")}
             alt=""
             width={400}
             height={500}
             className="hidden sm:block absolute right-[16%] bottom-0 h-[260px] w-auto object-contain opacity-80"
           />
           <Image
-            src="/images/about-images/tree-palm.png"
+            src={asset("/images/about-images/tree-palm.png")}
             alt=""
             width={400}
             height={500}

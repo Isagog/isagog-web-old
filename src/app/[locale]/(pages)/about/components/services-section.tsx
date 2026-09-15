@@ -1,5 +1,6 @@
 "use client";
 
+import { asset } from "@/lib/base-path";
 import { useScopedI18n } from "@/packages/locales/client";
 import Image from "next/image";
 
@@ -54,7 +55,7 @@ export const ServicesSection = () => {
         {faqsList.map((item, idx) => (
           <li key={idx} className="sm:space-y-3">
             <Image
-              src={treeIcons[idx % treeIcons.length]!}
+              src={asset(treeIcons[idx % treeIcons.length]!)}
               alt=""
               width={64}
               height={64}

@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionTitle } from "@/app/_components/custom/section-title";
+import { asset } from "@/lib/base-path";
 import { useScopedI18n } from "@/packages/locales/client";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,7 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-10 h-[80vh] mx-5 text-center">
       <Image
-        src="/images/trees.avif"
+        src={asset("/images/trees.avif")}
         alt="Tree"
         width={1280}
         height={853}
